@@ -1,0 +1,58 @@
+{
+  "schemaVersion": "1.0",
+  "pipeline": {
+    "description": "",
+    "id": "lzrDsi_78jb9",
+    "name": "pipe1"
+  },
+  "nodes": [
+    {
+      "config": {
+        "source": {
+          "database": "PIPELINE_APP",
+          "name": "CUSTOMERS",
+          "schema": "SAMPLE_DATA"
+        }
+      },
+      "id": "n_x8gLKBoV",
+      "position": {
+        "x": -502,
+        "y": -147.99999999999997
+      },
+      "type": "source"
+    },
+    {
+      "config": {
+        "derived": [
+          {
+            "alias": "CU",
+            "expr": "CURRENT_USER()"
+          }
+        ],
+        "keep_columns": [
+          "CUSTOMER_ID",
+          "NAME",
+          "REGION",
+          "SEGMENT",
+          "SIGNUP_DATE",
+          "AGE"
+        ]
+      },
+      "id": "n_ShiIwj-h",
+      "position": {
+        "x": 29.24999999999997,
+        "y": -54.24999999999997
+      },
+      "type": "select_columns"
+    }
+  ],
+  "edges": [
+    {
+      "id": "e_8Ve3sVgL",
+      "source": "n_x8gLKBoV",
+      "sourcePort": "out",
+      "target": "n_ShiIwj-h",
+      "targetPort": "in"
+    }
+  ]
+}
