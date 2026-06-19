@@ -1,5 +1,13 @@
 {
-  "edges": [],
+  "edges": [
+    {
+      "id": "e_lfK0-eOa",
+      "source": "n_ICh3czpA",
+      "sourcePort": "out",
+      "target": "n_68PJIHQD",
+      "targetPort": "in"
+    }
+  ],
   "nodes": [
     {
       "config": {
@@ -12,10 +20,34 @@
       "description": "node desc1",
       "id": "n_ICh3czpA",
       "position": {
-        "x": 13,
-        "y": 243
+        "x": 8,
+        "y": 8
       },
       "type": "source"
+    },
+    {
+      "config": {
+        "derived": [
+          {
+            "alias": "WWW",
+            "expr": "WEEK(\"SIGNUP_DATE\")"
+          }
+        ],
+        "keep_columns": [
+          "CUSTOMER_ID",
+          "NAME",
+          "REGION",
+          "SEGMENT",
+          "SIGNUP_DATE",
+          "AGE"
+        ]
+      },
+      "id": "n_68PJIHQD",
+      "position": {
+        "x": 308,
+        "y": 8
+      },
+      "type": "select_columns"
     }
   ],
   "pipeline": {
