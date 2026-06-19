@@ -1,0 +1,27 @@
+{
+  "edges": [],
+  "nodes": [
+    {
+      "config": {
+        "source": {
+          "database": "PIPELINE_APP",
+          "name": "CUSTOMERS",
+          "schema": "SAMPLE_DATA"
+        }
+      },
+      "description": "node desc1",
+      "id": "n_ICh3czpA",
+      "position": {
+        "x": 13,
+        "y": 243
+      },
+      "type": "source"
+    }
+  ],
+  "pipeline": {
+    "description": "proj desc",
+    "id": "fEo2G0OOyHZk",
+    "name": "newgitproject"
+  },
+  "schemaVersion": "1.0"
+}
